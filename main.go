@@ -20,3 +20,5 @@ func main() {
 	// Start the server
 	router.Run(":8080")
 }
+
+// The routing is up .
