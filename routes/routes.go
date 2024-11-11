@@ -5,12 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func SetupRoutes(router *gin.Engine) {
-	// Authentication routes
-	router.POST("/signup", controllers.SignupHandler)
-	router.POST("/login", controllers.LoginHandler)
-
-	// Escrow API routes
+func InitRoutes(router *gin.Engine) {
 	api := router.Group("/api")
 	{
 		api.POST("/create", controllers.CreateEscrow)

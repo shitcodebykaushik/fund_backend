@@ -12,6 +12,7 @@ import (
 )
 
 var Client *mongo.Client
+var EscrowCollection *mongo.Collection
 
 func Init() {
 	// Load environment variables
@@ -35,7 +36,8 @@ func Init() {
 	}
 
 	fmt.Println("Connected to MongoDB!")
-	Client = client
+	Client = client 
+	EscrowCollection = Client.Database("your_database_name").Collection("escrows") // Replace with your database name
 }
 
 // GetCollection provides access to a specific collection

@@ -15,10 +15,11 @@ func main() {
 	router := gin.Default()
 
 	// Set up routes
-	routes.AuthRoutes(router)
+	routes.SetupRoutes(router)
 
 	// Start the server
 	router.Run(":8080")
 }
 
 // The routing is up .
+
